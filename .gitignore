@@ -1,0 +1,13 @@
+# Ignore macOS system files
+.DS_Store
+
+# Ignore Python virtual environment (if any)
+.venv/
+
+# Ignore logs and temporary files
+*.log
+*.tmp
+
+# Ignore IDE-specific files (VS Code, JetBrains, etc.)
+.vscode/
+.idea/
