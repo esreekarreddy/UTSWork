@@ -11,3 +11,7 @@
 # Ignore IDE-specific files (VS Code, JetBrains, etc.)
 .vscode/
 .idea/
+
+# Ignore Python cache files
+__pycache__/
+*.pyc
