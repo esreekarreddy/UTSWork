@@ -8,6 +8,9 @@ class Shop:
 
     def sell(self):
         stock = int(input('Stock: '))
+        if stock <= 0:
+            print('Invalid quantity')
+            return
         cash = self.product.cash(stock)
 
         if self.product.has(stock):
@@ -15,10 +18,13 @@ class Shop:
             self.product.sold(stock)
             print(f'Sold {stock} {self.product.type}(s) for ${cash:.2f}')
         else:
-            print(f'Not enough stock')  
+            print(f'Not enough stock')
     
     def restock(self):
         stock = int(input('Stock: '))
+        if stock <= 0:
+            print('Invalid quantity')
+            return
         cash = self.product.cash(stock)
 
         if self.register.has(cash):

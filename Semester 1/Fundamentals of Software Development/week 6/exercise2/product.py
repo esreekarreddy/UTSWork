@@ -12,15 +12,21 @@ class Product:
     def is_empty(self):
         return self.stock == 0
 
-    def stocked(self, stock):   
+    def stocked(self, stock):
+        if stock <= 0:
+            raise ValueError("Stock amount must be positive")
         self.stock += stock
         return self.cash(stock)
     
     def sold(self, stock):
+        if stock <= 0:
+            raise ValueError("Stock amount must be positive")
         self.stock -= stock
         return self.cash(stock)
     
     def has(self, stock):
+        if stock <= 0:
+            return False
         return self.stock >= stock
     
     def cash(self, stock):
